@@ -1,0 +1,195 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h3{
+    margin-bottom: 1px;
+    font-weight:400;
+    font-size: medium;
+}
+
+aside{
+    background-color: rgb(129, 6, 72);
+    color: white;
+    padding: 15px 15px 0px;
+    max-width: 200px;
+}
+
+aside p,aside a,aside li{
+    font-size: 11px;
+    font-weight: lighter;
+}
+
+i {
+    font-size: smaller;
+    margin-right: 10px;
+    align-self: center;
+}
+
+ul{
+    padding-left: 40px;
+    padding-top: 0px;
+}
+
+aside ul{
+    padding-left: 0;
+    list-style-type: none;
+}
+
+aside li{
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+aside li:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: plum;
+}
+
+.proficiency, .dots{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.proficiency{
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    margin-right:0.2rem;
+    border-radius: 100%;
+    border: 1px solid plum;
+}
+
+.fill {
+    background-color: plum;
+}
+
+section.maindets {
+    padding: 15px 15px 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p, a, li{
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+h3.heading{
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+h3.heading:after{
+background-color: white;
+height: 1px;
+flex: 1;
+content: '';
+margin: 10px
+}
+
+.maindets h3.heading:after{
+    background-color: whitesmoke;
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.info h5, .info ul, .description h5, .description ul{
+   margin: 3px;
+}
+
+.duration{
+    width: 35%;
+}
+
+.description{
+    width: 65%;
+}
+
+.projects .description {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.duration, .company{
+    color: rgb(129, 6, 72);
+}
+
+.company {
+    font-weight: lighter;
+}
+
+
+@media only screen and (min-width: 570px){
+    main{
+        justify-content: center;
+    }
+    section.maindets{
+        max-width: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 570px){
+    main{
+        flex-direction: column;
+    }
+    aside{
+        max-width:100%
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .info{
+        flex-direction: column;
+    }
+    aside{
+        max-width:100%
+    }
+    .description{
+        width: 100%;
+    }
+    ul{
+        padding-left: 15px;
+    }
+}
